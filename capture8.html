@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>capture8</title>
+</head>
+<body>
+    <script>
+        //問題１と問題２
+
+        class Animal {
+           constructor (name, age){
+               this.name = name;
+               this.age = age;
+           }
+
+        }
+      class Cat extends Animal {
+          constructor(name, age, type) {
+              super(name, age);
+              this.type = type;
+          }
+          speak() {
+              console.log(this.name + 'が「にゃーん」と鳴きました!');
+          }
+      }
+      const cat = new Cat('リル', 3, 'シャム');
+     
+      cat.speak();
+     
+    </script>
+</body>
+</html>

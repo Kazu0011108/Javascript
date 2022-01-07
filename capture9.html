@@ -6,26 +6,26 @@
 </head>
 <body>
     <form name="myForm">
-       <label>名前 : <input type="text" name="myForm" /></label>
+       <label>名前 : <input type="text" name="name" /></label>
         <br>
-        <label>メールアドレス : <input type="text" name="myForm" />
+        <label>メールアドレス : <input type="email" name="email" /></label>
             <br>
-            <label>年齢 : 
+            <label>年齢 :</label> 
                 <input type="radio" name="age" value="dai" />20代
                 <input type="radio" name="age" value="dai" />30代
                 <input type="radio" name="age" value="dai" />40代
                 <input type="radio" name="age" value="dai" />50代
-                <br>
+
+                <br><br>
 
                 <label>普段使っているスマホは？</label><br>
-                <input type="checkbox" name="tell" value="iphone" />iPhone
-                <input type="checkbox" name="tell" value="android" />android
-                <input type="checkbox" name="tell" value="phone" />ガラケー
-                <input type="checkbox" name="tell" value="others" />その他
-            </label>
-        </label>
-    
+                <input type="checkbox" name="phone" value="iphone" />iPhone
+                <input type="checkbox" name="phone" value="android" />android
+                <input type="checkbox" name="phone" value="phone" />ガラケー
+                <input type="checkbox" name="phone" value="others" />その他
+  
     </form>
+    <br>
     <button id="btn">実行</button>
 
     <script>
@@ -34,8 +34,13 @@
         btn.addEventListener('click',()=>{
             const form = document.forms.myForm;
             
-            form.name.forEach(item =>{
-                if(item.checked) console.log(value);
+            console.log(form.name.value);//名前の取得
+            console.log(form.email.value);//メアドの取得
+            console.log(form.age.value);//年齢の取得
+
+            //スマホの種類の習得
+            form.phone.forEach(item =>{
+                if(item.checked) console.log(item.value);
             })
         });
     </script>

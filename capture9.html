@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>capture9</title>
+</head>
+<body>
+    <form name="myForm">
+       <label>名前 : <input type="text" name="myForm" /></label>
+        <br>
+        <label>メールアドレス : <input type="text" name="myForm" />
+            <br>
+            <label>年齢 : 
+                <input type="radio" name="age" value="dai" />20代
+                <input type="radio" name="age" value="dai" />30代
+                <input type="radio" name="age" value="dai" />40代
+                <input type="radio" name="age" value="dai" />50代
+                <br>
+
+                <label>普段使っているスマホは？</label><br>
+                <input type="checkbox" name="tell" value="iphone" />iPhone
+                <input type="checkbox" name="tell" value="android" />android
+                <input type="checkbox" name="tell" value="phone" />ガラケー
+                <input type="checkbox" name="tell" value="others" />その他
+            </label>
+        </label>
+    
+    </form>
+    <button id="btn">実行</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click',()=>{
+            const form = document.forms.myForm;
+            
+            form.name.forEach(item =>{
+                if(item.checked) console.log(value);
+            })
+        });
+    </script>
+</body>
+</html>
